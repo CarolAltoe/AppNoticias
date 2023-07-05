@@ -64,6 +64,4 @@ const sty = StyleSheet.create({
     }
 })
 
-
-
 export default Like;

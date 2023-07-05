@@ -51,6 +51,7 @@ const Alterar = ({ navigation, route }: any) => {
     }
 
     const handleUpdateNoticia = async () => {
+    {/*
         const storageRef = ref(FIRESTORE_STORAGE, 'images/' + new Date().getTime());
         const response = await fetch(imagem);
         const blob = await response.blob();
@@ -58,7 +59,8 @@ const Alterar = ({ navigation, route }: any) => {
         const url = await getDownloadURL(storageRef);
 
         handleAtualizaTexto("imagem", url);
-
+    
+    */}
         const colecao = doc(FIRESTORE_DB, 'Noticias', id);
         await updateDoc(colecao, noticia);
         navigation.navigate('Noticias', {email: email});
