@@ -59,7 +59,6 @@ const Alterar = ({ navigation, route }: any) => {
         const url = await getDownloadURL(storageRef);
 
         handleAtualizaTexto("imagem", url);
-    
     */}
         const colecao = doc(FIRESTORE_DB, 'Noticias', id);
         await updateDoc(colecao, noticia);
