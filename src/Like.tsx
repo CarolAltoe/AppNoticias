@@ -19,12 +19,12 @@ const Like = ({ item }) => {
                 updatedData = {
                     likes: --item.likes,
                 };
-                console.log("deslike" + updatedData.likes)
+                console.log("deslike: " + updatedData.likes)
             } else {
                 updatedData = {
                     likes: ++item.likes,
                 };
-                console.log("like" + updatedData.likes)
+                console.log("like: " + updatedData.likes)
             }
 
             await updateDoc(noticia, updatedData);
@@ -36,15 +36,9 @@ const Like = ({ item }) => {
                 };
                 return updatedLikedItems;
             });
-
-
-
         } catch (error) {
             alert("Não foi possivel dar like! " + error);
         }
-
-
-       
     };
 
     const isLiked = likedItems[item.id] || false;
@@ -53,7 +47,7 @@ const Like = ({ item }) => {
     return (
             <TouchableOpacity style={{...sty.like, ...styles.button}} onPress={() => handleLike(item.id)}>
                 <FontAwesomeIcon icon={faStar} size={20} color={iconColor} />
-                <Text style={sty.text}>{item.likes} avaliação(ões)</Text> 
+                <Text style={sty.text}>{item.likes}</Text> 
             </TouchableOpacity>
     );
 };
