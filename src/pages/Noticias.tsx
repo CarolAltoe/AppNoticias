@@ -95,19 +95,15 @@ const Noticias = ({navigation, route}:any) => {
                             <View style={styles.btns}>
                                 <View style={styles.btnAcoes}>
                                     
-                                    {/**
-                                     *  
-                                     * 
+                                    {/*
                                      * <TouchableOpacity style={styles.like} onPress={() => curtir(noticia.id)}>
                                         <FontAwesomeIcon icon={faHeart} size={20}/>
                                         <Text style={styles.text}>{noticia.like} avaliação(ões)</Text> 
                                     </TouchableOpacity>
-                                     */}
+                                    */}
 
-<Like key={noticia.id} item={noticia} />
+                                    <Like key={noticia.id} item={noticia} />
                                     
-                                    
-                                   
                                 </View>
 
                                 {noticia.autor == email &&

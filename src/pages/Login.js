@@ -42,7 +42,7 @@ function LoginScreen() {
 
       <Image
         style={styles.logo}
-        source={require('../../assets/icon.png')}
+        source={require('../../assets/news.png')}
       />
       
       <Text style={styles.h1}>App Noticias</Text>
