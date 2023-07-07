@@ -46,12 +46,12 @@ const Alterar = ({ navigation, route }: any) => {
         });
 
         if(!result.cancelled){
-            setImagem(result.assets![0].uri);
+            setImagem(result.uri);
         }
     }
 
     const handleUpdateNoticia = async () => {
-    {/*
+    
         const storageRef = ref(FIRESTORE_STORAGE, 'images/' + new Date().getTime());
         const response = await fetch(imagem);
         const blob = await response.blob();
@@ -59,7 +59,7 @@ const Alterar = ({ navigation, route }: any) => {
         const url = await getDownloadURL(storageRef);
 
         handleAtualizaTexto("imagem", url);
-    */}
+    
         const colecao = doc(FIRESTORE_DB, 'Noticias', id);
         await updateDoc(colecao, noticia);
         navigation.navigate('Noticias', {email: email});
@@ -95,11 +95,11 @@ const Alterar = ({ navigation, route }: any) => {
                     <Image style={{width: 50, height: 50}} source={{uri:noticia.imagem}} />
                        
                     <Text style={styles.h2}>Insira a nova imagem: </Text>
-                        <TextInput
+                       {/* <TextInput
                             onChangeText={(t: string) => selectImage()}
                             value={noticia.imagem}
                             style={styles.inputField}
-                        />
+    />*/}
 
                         {  imagem != null &&
                             <Image style={{width: 50, height: 50}} source={{uri:imagem}} />

@@ -47,9 +47,11 @@ const Cadastro = ({ navigation, route }: any) => {
             setTitulo('');
             setData('');
             setImagem('');
+
+            alert("Notícia cadastrada com sucesso!")
         }
         catch (error){
-            alert("erro: " + error);
+            alert("Erro ao cadastrar: " + error);
         }
        
     }
@@ -81,11 +83,11 @@ const Cadastro = ({ navigation, route }: any) => {
             />
 
             <Text style={styles.h2}>Comprove a vericidade da notícia com uma imagem: </Text>
-            <TextInput
+         {/*   <TextInput
                 onChangeText={(t: string) => setImagem(t)}
                 value={imagem}
                 style={styles.inputField}
-            />
+            /> */}
 
             {  imagem != null &&
                 <Image style={{width: 50, height: 50}} source={{uri:imagem}} resizeMode="cover" />

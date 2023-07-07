@@ -2,7 +2,8 @@ import React, { useState, useLayoutEffect, useEffect} from 'react';
 import { View, Text, StyleSheet, Button, Image, TouchableOpacity, ScrollView, FlatList, TextInput} from 'react-native';
 import {styles} from '../../styles';
 import { useNavigation, useRoute } from '@react-navigation/native';
-import { signOut } from 'firebase/auth';
+import { signOut} from 'firebase/auth';
+import {auth } from "../../firebaseConfig";
 //import BotaoDireito from '../components/btDireito';
 //import Logo from '../components/Logo';
 
